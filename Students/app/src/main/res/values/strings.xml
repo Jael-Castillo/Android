@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Students</string>
+    <string name="Datos">Introduce tus datos</string>
+    <string name="boleta">Boleta (sólo hasta 10 caracteres)</string>
+    <string name="nombre">Nombre (sólo 15 caracteres)</string>
+
+
+    <string name="enviar">Enviar</string>
+    <string name="limpiar">Limpiar</string>
+</resources>

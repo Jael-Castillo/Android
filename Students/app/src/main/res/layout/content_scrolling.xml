@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!--TITULO-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="@string/Datos"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:typeface="monospace"
+        android:gravity="center"/>
+
+    <!--BOLETA DEL ALUMNO-->
+    <EditText
+        android:id="@+id/boleta"
+        android:hint="@string/boleta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:maxLength="10"/>
+
+    <!--BOLETA DEL ALUMNO-->
+    <EditText
+        android:id="@+id/nombre"
+        android:hint="@string/nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:maxLength="10"/>
+
+    <!--FECHA DE ACIMIENTO DEL ALUMNO-->
+
+
+    <!--HORA ACTUAL-->
+
+
+    <!--DÍAS VIVIDOS DEL ALUMNO E INFORMACIÓN-->
+
+
+    <!--Bton ENVIAR y LIMPIAR-->
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/enviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enviar"
+            android:textSize="18sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/limpiar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/limpiar"
+            android:textSize="18sp"
+            tools:ignore="ButtonStyle"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+ </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v4.widget.NestedScrollView>
