@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Deportes</string>
+    <string name="titulo">Deportes</string>
+    <string name="lblSelecciondeporte">Elige un deporte: </string>
+    <string name="lblSelecciones">Deportes seleccionados: </string>
+    <string-array name="valores_array">
+        <item></item>
+        <item>Americano</item>
+        <item>Criquet</item>
+        <item>Gimnasia</item>
+        <item>Remo</item>
+        <item>Rugby</item>
+        <item>Tiro con Arco</item>
+        <item>Esgrima</item>
+    </string-array>
+
+</resources>
