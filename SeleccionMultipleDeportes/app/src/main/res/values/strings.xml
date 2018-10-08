@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DEPORTES</string>
+    <string name="instrucciones">Selecciona algun deporte de tu preferencia</string>
+    <string name="americano">Americano</string>
+    <string name="criquet">Criquet</string>
+    <string name="gimnasia">Gimnasia</string>
+    <string name="esgrima">Esgrima</string>
+    <string name="tiroArco">Tiro con Arco</string>
+    <string name="btn_seleccion">Seleccion</string>
+    <string name="btn_limpiar">Borrar</string>
+    <string name="action_settings">Pocesar</string>
+</resources>

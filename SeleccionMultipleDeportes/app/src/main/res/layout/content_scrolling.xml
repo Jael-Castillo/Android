@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/instrucciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/instrucciones"
+            android:textSize="20sp"
+            android:typeface="monospace"/>
+        <CheckBox
+            android:id="@+id/americano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/americano"/>
+        <CheckBox
+            android:id="@+id/criquet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/criquet"/>
+        <CheckBox
+            android:id="@+id/gimansia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gimnasia"/>
+        <CheckBox
+            android:id="@+id/esgrima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/esgrima"/>
+        <CheckBox
+            android:id="@+id/tiroArco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tiroArco"/>
+
+        <TextView
+            android:id="@+id/salida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+
+        <Button
+            android:id="@+id/btn_seleccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_seleccion"
+            android:textColor="@color/Letras"
+            android:backgroundTint="@color/Button"/>
+
+        <Button
+            android:id="@+id/btn_limpiar"
+            android:onClick="Limpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_limpiar"
+            android:textColor="@color/Letras"
+            android:backgroundTint="@color/Button"/>
+    </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deporte"/>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
