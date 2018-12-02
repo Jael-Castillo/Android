@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Menú de Hamburguesas</string>
+    <string name="info">Bienvenido, por favor selecciona del menú tu orden</string>
+
+    <string name="burgerjoint">Burger Joint $55</string>
+    <string name="butchersons">Butcher Sons $63</string>
+    <string name="umamiburger">Umami Burger $65</string>
+    <string name="flippinburgers">Flippin Burgers $70</string>
+    <string name="ferburger">Ferburger $71</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

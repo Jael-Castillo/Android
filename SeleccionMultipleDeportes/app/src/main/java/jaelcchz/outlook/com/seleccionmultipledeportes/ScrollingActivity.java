@@ -38,7 +38,6 @@ public class ScrollingActivity extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        btn_seleccion = (Button)findViewById(R.id.btn_seleccion);
         deporte = (ImageView) findViewById(R.id.deporte);
         salida = (TextView) findViewById(R.id.salida);
         btn_seleccion = (Button)findViewById(R.id.btn_seleccion);
@@ -48,6 +47,8 @@ public class ScrollingActivity extends AppCompatActivity{
                 (CheckBox) findViewById(R.id.gimansia),
                 (CheckBox) findViewById(R.id.esgrima),
                 (CheckBox) findViewById(R.id.tiroArco) };
+        btn_seleccion = (Button)findViewById(R.id.btn_seleccion);
+        btn_limpiar = (Button)findViewById(R.id.btn_limpiar);
 
 //--------------------Selección en el boton email.---------------------------//
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);*/
@@ -55,8 +56,7 @@ public class ScrollingActivity extends AppCompatActivity{
 
 
 //---------------------BOTON SELECCIÓN-------------------------------//
-        btn_seleccion = (Button)findViewById(R.id.btn_seleccion);
-        btn_limpiar = (Button)findViewById(R.id.btn_limpiar);
+
 
         btn_seleccion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +97,7 @@ public class ScrollingActivity extends AppCompatActivity{
         });
     }
 
-//---------------------BOTON SELECCIÓN-------------------------------//
+//---------------------BOTON BORRAR-------------------------------//
         public void Limpiar(View view){
             deporte.setImageDrawable(null);
             salida.setText("");

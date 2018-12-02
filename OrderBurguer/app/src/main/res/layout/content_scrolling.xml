@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/info"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/info"
+            android:textSize="18sp"
+            android:typeface="monospace"/>
+
+        <!-- BURGERS PAY-->
+        <TextView
+            android:id="@+id/salida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:typeface="monospace"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- CHECKBOX´S -->
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/burgerjoint"
+            android:text="@string/burgerjoint"
+            android:textSize="15sp"
+            android:typeface="monospace"
+            android:checked="false"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/burgerjoint"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/butchersons"
+            android:text="@string/butchersons"
+            android:textSize="15sp"
+            android:typeface="monospace"
+            android:checked="false"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/butchersons"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/umamiburger"
+            android:text="@string/umamiburger"
+            android:textSize="15sp"
+            android:typeface="monospace"
+            android:checked="false"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/umamiburger"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flippinburgers"
+            android:text="@string/flippinburgers"
+            android:textSize="15sp"
+            android:typeface="monospace"
+            android:checked="false"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/flippinburgers"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ferburger"
+            android:text="@string/ferburger"
+            android:textSize="15sp"
+            android:typeface="monospace"
+            android:checked="false"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ferburger"/>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

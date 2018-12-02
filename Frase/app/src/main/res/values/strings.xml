@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Frase</string>
+    <string name="frase">FRASE</string>
+    <string name="total">--</string>
+    <string name="texto2">--</string>
+    <string name="texto1"></string>
+    <string name="usuario">Usuario ( sólo hasta 20 caracteres)</string>
+    <string name="enviar">Enviar</string>
+    <string name="limpiar">Limpiar</string>
+
+
+</resources>
