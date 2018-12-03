@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "835792814108",
+    "firebase_url": "https://jkarinacc-53eeb.firebaseio.com",
+    "project_id": "jkarinacc-53eeb",
+    "storage_bucket": "jkarinacc-53eeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835792814108:android:a30518c30d39b3ac",
+        "android_client_info": {
+          "package_name": "com.alain.cursos.menudecomidas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835792814108-5rb51kba51j9hk01qc63hieo50181hpa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzDmyAZSH-SuDsxNE78P9B5phRtUoOV08"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
