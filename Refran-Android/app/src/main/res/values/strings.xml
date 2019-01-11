@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Amvc</string>
+    <string name="nombre1">Nombre 1</string>
+    <string name="nombre2">Nombre 2</string>
+    <string name="saludar">Saludar</string>
+    <string name="formato_del_saludo">Saludos a %1$s y a %2$s</string>
+    <string name="falta_el_nombre_1">Falta el nombre 1</string>
+    <string name="falta_el_nombre_2">Falta el nombre 2</string>
+</resources>

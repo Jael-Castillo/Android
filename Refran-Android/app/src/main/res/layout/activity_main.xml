@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nombre1"
+        android:hint="@string/nombre1"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        android:typeface="monospace"
+        />
+
+    <EditText
+        android:id="@+id/nombre2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre2"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        android:typeface="monospace"
+        />
+
+    <TextView
+        android:id="@+id/respuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:typeface="monospace"/>
+
+    <Button
+        android:id="@+id/saluda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saludar"
+        android:onClick="saluda"
+        android:textSize="15sp"
+        android:typeface="monospace"
+        />
+
+</LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
