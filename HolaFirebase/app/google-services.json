@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "281478161398",
+    "firebase_url": "https://curso-android-firesabe.firebaseio.com",
+    "project_id": "curso-android-firesabe",
+    "storage_bucket": "curso-android-firesabe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281478161398:android:a687ca8944fb7c1b",
+        "android_client_info": {
+          "package_name": "jaelcchz.outlook.com.holafirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281478161398-qopqd3qs5u2gpcrn4d9931po7d1u94ar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jaelcchz.outlook.com.holafirebase",
+            "certificate_hash": "51ce00711a18d86eedc2a86b2db384035b516b27"
+          }
+        },
+        {
+          "client_id": "281478161398-0ifjfhv6t66h26qt5q80g54kbr2qjv1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK-mb2-KsN1xywdJ8k6JeDA2xBcR99pjA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281478161398-0ifjfhv6t66h26qt5q80g54kbr2qjv1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
