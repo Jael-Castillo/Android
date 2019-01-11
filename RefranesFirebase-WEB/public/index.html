@@ -1,0 +1,172 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ejercicio Firebase</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="upiicsa.png">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<style type="text/css">
+			.fas {
+			 padding: 2px; }
+
+			 .btn{
+			 	margin:3px
+			 }
+		</style>
+	</head>
+		<body>
+		<div class="jumbotron text-center">
+		  <h1>Bienvenido</h1>
+		  <p>Aquí puedes crear tu lista de refranes</p>
+		  <a id="btnAgregar" class="btn btn-info"  data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Agregar</a>
+		</div>
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-10">
+						<!--Tabla-->
+						<table class="table table-hove">
+							<thead>
+								<tr>
+									<th>Refranes Agregados</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody id="tbody-tabla-refranes"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+	
+		<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+ 		<script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
+	    <script defer src="/__/firebase/5.5.8/firebase-database.js"></script>
+	    <!-- initialize the SDK after all desired features are loaded -->
+	    <script defer src="/__/firebase/init.js"></script>
+	    <script type="text/javascript">
+						// Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyA4qmznzJbkjh5TrcJ40NrhDrFYFqXQ3y0",
+			    authDomain: "karinacc-a36ec.firebaseapp.com",
+			    databaseURL: "https://karinacc-a36ec.firebaseio.com",
+			    projectId: "karinacc-a36ec",
+			    storageBucket: "karinacc-a36ec.appspot.com",
+			    messagingSenderId: "71636466070"
+			  };
+			  firebase.initializeApp(config);
+
+			  var database = firebase.database();
+
+			var conexion = firebase.database().ref('Refran');
+
+			conexion.on('value', nodos => {
+				const contenedor = document.querySelector('#tbody-tabla-refranes')
+				contenedor.textContent = ''
+
+				nodos.forEach(nodo => {
+					const { id, texto } = nodo.val()
+
+					// Se crean elementos
+					const fila = document.createElement('tr')
+					const celdaTexto = document.createElement('td')
+					const celdaAcciones = document.createElement('td')
+					const btnVer = document.createElement('a')
+					const btnEditar = document.createElement('a')
+					const btnEliminar = document.createElement('a')
+					const iconEditar = document.createElement('a')
+					const iconEliminar = document.createElement('a')
+
+					// Se agrega ID
+					fila.id = id
+					fila.dataset.texto = texto
+
+					// Se agregan clases
+					//btnVer.classList = 'btn btn-sm btn-primary'
+					btnEditar.classList = 'btn btn-sm btn-warning'
+					btnEliminar.classList = 'btn btn-sm btn-danger'
+					iconEditar.classList = 'fas fa-edit'
+					iconEliminar.classList = 'fas fa-trash'
+
+					// Se agrega contenido
+					//btnVer.textContent = 'Ver'
+					btnEditar.textContent= 'Editar'
+					btnEliminar.textContent = 'Eliminar'
+					celdaTexto.textContent = texto
+
+					// Se agrega accion
+					//btnVer.dataset.accion = 'ver'
+					btnEditar.dataset.accion = 'editar'
+					btnEliminar.dataset.accion = 'eliminar'
+
+					// Se agrega al DOM
+					btnEditar.appendChild(iconEditar)
+					btnEliminar.appendChild(iconEliminar)
+					//celdaAcciones.appendChild(btnVer)
+					celdaAcciones.appendChild(btnEditar)
+					celdaAcciones.appendChild(btnEliminar)
+					fila.appendChild(celdaTexto)
+					fila.appendChild(celdaAcciones)
+					contenedor.appendChild(fila)
+				})
+			});
+
+			document.addEventListener('click', e => {
+				const el = e.target
+				const tr = el.closest('tr')
+
+				if (! tr) return
+
+				const id = tr.id
+				const texto = tr.dataset.texto
+
+				switch(el.dataset.accion) {
+					/*case 'ver':
+						
+						break;*/
+					case 'editar':
+						const nuevoTexto = prompt('Edita el Refrán: ', texto)
+
+						if (! nuevoTexto.trim()) return
+
+						  firebase.database().ref('Refran/' + id).set({
+						    id: id,
+						    texto: nuevoTexto,
+						  }, err => {
+						    if (err) {
+						      alert('No se pudo editar')
+						    } else {
+						      // Data saved successfully!
+						    }
+						  })
+						break;
+					case 'eliminar':
+						if (confirm('¿Seguro que desea eliminar: ' + texto))
+							firebase.database().ref('Refran/' + id).remove()
+						break;
+				}
+			})
+			const btnAgregar = document.querySelector('#btnAgregar')
+
+						btnAgregar.addEventListener('click', _ => {
+							const nuevoTexto = prompt('Nuevo Refrán: ')
+
+							if (! nuevoTexto.trim()) return
+							
+							const ref = firebase.database().ref('Refran').push()
+							  ref.set({
+							  	id: ref.key,
+							    texto: nuevoTexto
+							  }, err => {
+							    if (err) {
+							      alert('No se pudo crear')
+							    } else {
+							      // Data saved successfully!
+							    }
+							  })
+						})
+			</script>
+		</body>
+	</html>
